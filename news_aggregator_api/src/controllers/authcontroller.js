@@ -1,6 +1,6 @@
 var jwt = require('jsonwebtoken');
 var bcryptjs = require('bcryptjs');
-var User = require('../model/user');
+var User = require('../models/user');
 
 var signup = (req, res) => {
     const user = new User({

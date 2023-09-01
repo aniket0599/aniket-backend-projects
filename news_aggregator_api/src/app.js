@@ -3,11 +3,11 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const routes = require('express').Router();
 const newsInfo = require('./routes/newsInfo');
-const User = require("./models/user");
-var jwt = require("jsonwebtoken");
-var bcrypt = require("bcrypt");
+// const User = require("./models/user");
+// var jwt = require("jsonwebtoken");
+// var bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
-const {signin, signup} = require("./controllers/authController");
+const {signin, signup} = require("./controllers/authcontroller");
 require("dotenv")
   .config();
 
@@ -18,7 +18,7 @@ process.on('unhandledRejection', error => {
 //Connect to database
 
 try {
-  mongoose.connect("mongodb+srv://aniketpec22:<qazmlp098>@newsapi.odzybrq.mongodb.net/", {
+  mongoose.connect("mongodb+srv://aniketpec22:qazmlp098@newsapi.odzybrq.mongodb.net/", {
     useUnifiedTopology: true,
     useNewUrlParser: true
   });

@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const URLSearchParams = require('url-search-params');
-const newsRoutes = requires('express').Router();
+const newsRoutes = require('express').Router();
 const User = require("../models/user");
 const {validator} = require('../helpers/validator');
 const verifyToken = require('../middleware/authJWT');
@@ -82,3 +82,5 @@ newsRoutes.put('/preferences', verifyToken, (req, res) => {
     }
     
   });
+
+  module.exports = newsRoutes;
